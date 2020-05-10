@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>SQL Query Tool</title>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/queryInputstyle.css') }}">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>	
+		<script src="{{ url_for('static', filename='js/localJS.js') }}"></script>
+	</head>
+	<body>
+		<div>
+			<h2>SQL Query Tool</h2>	
+			<label for="env" class="selectLabel">Choose Environment: </label>
+			<select onchange= "jsFunction()" name="env" id="env" class="dbDrop" style="width:200px">
+				<option vlaue="default">----- Select DB -----</option>
+				<option vlaue="Oracle DB">Oracle DB</option>
+				<option vlaue="MSSQL DB">MSSQL DB</option>
+				<option vlaue="MySQL DB">MySQL DB</option>
+				<option vlaue="DB2 DB">DB2 DB</option>
+			</select>
+			<label for="tables" class="selectTableLabel">Table: </label>
+			<select class="tables" name="tableDropdown" onchange="getColumn()" id="env1">
+			</select><br><br>		
+			<label class="inputQ"><input type="checkbox" name="selectAll" onchange="updateWhereFlag1()" class="inputCheck">&nbsp;&nbsp;SELECT * FROM TABLE&nbsp;&nbsp;</label><br><br>
+			<label class="inputQ1"><input type="checkbox" name="conditional" class="inputCheck1"/>&nbsp;&nbsp;WHERE&nbsp;&nbsp;</label>
+			<select class="columns" name="columnDropdown" onchange="updateWhereFlag()" id="env2">
+			</select>&nbsp;&nbsp;
+			<select name="operator" class= "operator" id="env3">
+				<option value="0">like</option>
+				<option value="1">is equal to</option>
+			</select>&nbsp;&nbsp;
+			<input type="text" name="colValue" id="colValue" class="inputVal" placeholder="input value here"/>			
+			<p style="font-weight: bold; color: #0d3d56; font-size: 16px;">Query:</p>
+			<textarea class="query" name="query">{{savedQueries}}</textarea><br><br>
+			<button type="submit" onclick="outputResult()" class="querySubmit">Submit</button>
+			<div class="queryOutput">
+			</div>
+		</div>
+	</body>
+</html>

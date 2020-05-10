@@ -1,0 +1,107 @@
+h2{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: Georgia, serif;
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	text-align: center;
+}
+
+.selectLabel{
+	width: 200px;
+	font-weight: bold; 
+	color: #0d3d56;
+	font-size: 16px;
+}
+
+
+.query{
+	width: 100%;
+	height: 40%;
+	text-align: left;
+	font-family: Helvetica;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: 2px solid black;
+	background-color: #07B5B2;
+}
+
+.querySubmit{
+	width: 160px;
+	height: 38px;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px 10px;
+	background-color: #e7e7e7;
+	border-radius: 4px;
+	cursor: pointer;	
+	margin:auto;
+	display:block;	
+}
+
+.querySubmit:hover{
+background-color: #839192;
+}
+
+.selectTableLabel{ 
+	margin-left: 50px;
+	font-weight: bold; 
+	color: #0d3d56;
+	font-size: 16px;	
+}
+
+.selectColumnLabel{
+	width: 200px;
+	font-weight: bold; 
+	color: #0d3d56;
+	font-size: 16px;
+}
+
+.tables{
+	width:350px; 
+}
+
+.columns{
+	width:350px; 
+	margin: 10px;
+}
+
+.operator{
+	width:140px; 
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-top: 10px;
+}
+
+.inputQ{
+	margin-left: 50px;
+	font-weight: bold; 
+	color: #0d3d56;
+	font-size: 16px;
+	margin-left: 0px;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
+.inputQ1{
+	margin-left: 50px;
+	font-weight: bold; 
+	color: #0d3d56;
+	font-size: 16px;
+	margin-left: 0px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#colValue{
+	background-color: #FFFFCC;
+	border-radius: 4px;
+	padding: 5px 5px; 
+	line-height: 10px;
+	width: 250px;
+}
+

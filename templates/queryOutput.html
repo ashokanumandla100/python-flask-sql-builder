@@ -1,0 +1,16 @@
+<br><br><br>
+<p style="font-weight: bold; color: #0d3d56; font-size: 18px; text-align: center;">==================QUERY RESULT========================</p>
+<p>All Rows Fetched: <b>{{result[3]}}</b></p>	
+<p>Query: {{result[4]}}</p>
+<table class="resultTable">
+{% for eachCol in result[2] %}
+	<th>{{eachCol}}</th>
+{% endfor %}
+{% for item in result[0] %}
+	<tr>
+		{% for i in result[1] %}
+			<td>{{item[i]}}</td>
+		{% endfor %}
+	</tr>
+{% endfor %}
+</table>
