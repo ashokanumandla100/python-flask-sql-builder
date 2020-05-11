@@ -9,7 +9,11 @@
 {% for item in result[0] %}
 	<tr>
 		{% for i in result[1] %}
-			<td>{{item[i]}}</td>
+			{% if "http://" in item[i]|string() %}
+				<td><a href="{{item[i]}}">{{item[i]}}</a></td>
+			{% else %}
+				<td>{{item[i]}}</td>
+			{% endif %}
 		{% endfor %}
 	</tr>
 {% endfor %}

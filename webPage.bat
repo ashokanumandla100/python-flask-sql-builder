@@ -1,3 +1,3 @@
 @echo off
-python D:/Ashok/Python/pythonProjects/pythonWebpage/webPage.py %*
+python D:/Ashok/Python/pythonWebpage/webPage.py %*
 pause
